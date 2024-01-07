@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "a48b7c79-1a51-4815-b2d4-4559a66880fe",
+		"name": "Forbmax Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21690574"
+	},
+	"item": [
+		{
+			"name": "User Create",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "cookiesession1=678A3E15C577D2D9E96890E8CDA690F1",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "services.sia.homeoffice.gov.uk",
+						"type": "text"
+					},
+					{
+						"key": "Sec-Ch-Ua",
+						"value": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Google Chrome\";v=\"116\"",
+						"type": "text"
+					},
+					{
+						"key": "Sec-Ch-Ua-Mobile",
+						"value": "?0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://services.sia.homeoffice.gov.uk/PublicRegister/SearchPublicRegisterNew?aspxerrorpath=/PublicRegister/SearchPublicRegisterByLicence&Remote Address:=198.16.76.69:443&Referrer Policy:=strict-origin-when-cross-origin",
+					"protocol": "https",
+					"host": [
+						"services",
+						"sia",
+						"homeoffice",
+						"gov",
+						"uk"
+					],
+					"path": [
+						"PublicRegister",
+						"SearchPublicRegisterNew"
+					],
+					"query": [
+						{
+							"key": "aspxerrorpath",
+							"value": "/PublicRegister/SearchPublicRegisterByLicence"
+						},
+						{
+							"key": "Remote Address:",
+							"value": "198.16.76.69:443"
+						},
+						{
+							"key": "Referrer Policy:",
+							"value": "strict-origin-when-cross-origin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create Group",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "5416e784a6aee8495ca2826bec63e0b7e35cb956"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "group_name",
+							"value": "Friends",
+							"type": "text"
+						},
+						{
+							"key": "users",
+							"value": "[1]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/group/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"group",
+						"create",
+						""
+					],
+					"query": [
+						{
+							"key": "group_name",
+							"value": "Friends",
+							"disabled": true
+						},
+						{
+							"key": "users",
+							"value": "[1, 2]",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Content creation",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Content View",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

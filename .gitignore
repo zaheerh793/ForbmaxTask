@@ -1,0 +1,25 @@
+# Ignore compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore build directories
+content/
+templates/
+.idea/
+forbmaxTaskapp/migrations
+
+# Ignore temporary files
+*~
+
+# Ignore log files
+*.log
+*.
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive information (example: API keys)
+/db.sqlite3
